@@ -16,6 +16,8 @@ em um mapa de barreiras confiável e em um relatório para a zeladoria**, sem ni
 | Lana Giulia Auada Leite | RM551143 |
 | Tony Willian da Silva Segalin | RM550667 |
 
+**Repositório:** https://github.com/LanaAuada/guiding-hand-rpa
+
 **Vídeo (até 3 min):** _cole aqui o link do YouTube/Drive_
 
 ## O problema e o que a automação faz
