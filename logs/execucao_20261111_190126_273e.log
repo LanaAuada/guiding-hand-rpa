@@ -1,0 +1,7 @@
+2026-11-11 19:01:26 | INFO     | === Início da execução 20261111_190126_273e ===
+2026-11-11 19:01:26 | INFO     | Estado carregado: 7 barreiras conhecidas
+2026-11-11 19:01:28 | INFO     | API respondeu na tentativa 1/3 com 4 detecções
+2026-11-11 19:01:28 | INFO     | Barreira GH-46713A14 (galho_baixo): pendente -> confirmada | 3 óculos, 4 detecções, prioridade alta
+2026-11-11 19:01:28 | INFO     | Detecções: 4 lidas | 4 aceitas | 0 inválidas | 0 duplicadas | 0 móveis | 0 baixa confiança | 0 erros
+2026-11-11 19:01:28 | INFO     | Barreiras: 5 confirmadas | 2 pendentes | 1 possivelmente resolvidas
+2026-11-11 19:01:28 | INFO     | === Fim da execução: SUCESSO (2.15s) ===

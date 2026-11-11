@@ -1,7 +1,7 @@
 {
-  "execucao": "20261111_180443_6bb0",
-  "inicio": "2026-11-11T18:04:43",
-  "duracao_segundos": 15.204,
+  "execucao": "20261111_190143_19c9",
+  "inicio": "2026-11-11T19:01:43",
+  "duracao_segundos": 15.399,
   "status": "concluida_com_alertas",
   "fontes": {
     "arquivos_lidos": 0,
@@ -33,5 +33,5 @@
     "mapa_barreiras.geojson",
     "relatorio_zeladoria_2026-11-11.csv"
   ],
-  "log": "execucao_20261111_180443_6bb0.log"
+  "log": "execucao_20261111_190143_19c9.log"
 }

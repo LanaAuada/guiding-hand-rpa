@@ -4,7 +4,7 @@
     {
       "id_deteccao": "DET-00001",
       "id_dispositivo": "OCL-0001",
-      "data_hora": "2026-11-10T20:49:37",
+      "data_hora": "2026-11-10T21:45:37",
       "latitude": -23.544062,
       "longitude": -46.642161,
       "tipo": "buraco",
@@ -13,7 +13,7 @@
     {
       "id_deteccao": "DET-00002",
       "id_dispositivo": "OCL-0002",
-      "data_hora": "2026-11-10T17:30:37",
+      "data_hora": "2026-11-10T18:26:37",
       "latitude": -23.544064,
       "longitude": -46.642161,
       "tipo": "buraco",
@@ -22,7 +22,7 @@
     {
       "id_deteccao": "DET-00003",
       "id_dispositivo": "OCL-0003",
-      "data_hora": "2026-11-11T03:50:37",
+      "data_hora": "2026-11-11T04:46:37",
       "latitude": -23.544075,
       "longitude": -46.642265,
       "tipo": "buraco",
@@ -31,7 +31,7 @@
     {
       "id_deteccao": "DET-00004",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-11T16:20:37",
+      "data_hora": "2026-11-11T17:16:37",
       "latitude": -23.54399,
       "longitude": -46.642165,
       "tipo": "buraco",
@@ -40,7 +40,7 @@
     {
       "id_deteccao": "DET-00005",
       "id_dispositivo": "OCL-0005",
-      "data_hora": "2026-11-11T09:09:37",
+      "data_hora": "2026-11-11T10:05:37",
       "latitude": -23.544008,
       "longitude": -46.642235,
       "tipo": "buraco",
@@ -49,7 +49,7 @@
     {
       "id_deteccao": "DET-00006",
       "id_dispositivo": "OCL-0002",
-      "data_hora": "2026-11-10T15:47:37",
+      "data_hora": "2026-11-10T16:43:37",
       "latitude": -23.544054,
       "longitude": -46.642212,
       "tipo": "buraco",
@@ -58,7 +58,7 @@
     {
       "id_deteccao": "DET-00007",
       "id_dispositivo": "OCL-0003",
-      "data_hora": "2026-11-10T16:58:37",
+      "data_hora": "2026-11-10T17:54:37",
       "latitude": -23.544026,
       "longitude": -46.642265,
       "tipo": "buraco",
@@ -67,7 +67,7 @@
     {
       "id_deteccao": "DET-00008",
       "id_dispositivo": "OCL-0001",
-      "data_hora": "2026-11-11T05:18:37",
+      "data_hora": "2026-11-11T06:14:37",
       "latitude": -23.543983,
       "longitude": -46.642151,
       "tipo": "buraco",
@@ -76,7 +76,7 @@
     {
       "id_deteccao": "DET-00009",
       "id_dispositivo": "OCL-0002",
-      "data_hora": "2026-11-11T13:29:37",
+      "data_hora": "2026-11-11T14:25:37",
       "latitude": -23.545124,
       "longitude": -46.640719,
       "tipo": "placa_baixa",
@@ -85,7 +85,7 @@
     {
       "id_deteccao": "DET-00010",
       "id_dispositivo": "OCL-0006",
-      "data_hora": "2026-11-10T20:28:37",
+      "data_hora": "2026-11-10T21:24:37",
       "latitude": -23.545181,
       "longitude": -46.640642,
       "tipo": "placa_baixa",
@@ -94,7 +94,7 @@
     {
       "id_deteccao": "DET-00011",
       "id_dispositivo": "OCL-0007",
-      "data_hora": "2026-11-11T14:46:37",
+      "data_hora": "2026-11-11T15:42:37",
       "latitude": -23.545273,
       "longitude": -46.640744,
       "tipo": "placa_baixa",
@@ -103,7 +103,7 @@
     {
       "id_deteccao": "DET-00012",
       "id_dispositivo": "OCL-0008",
-      "data_hora": "2026-11-10T13:47:37",
+      "data_hora": "2026-11-10T14:43:37",
       "latitude": -23.545243,
       "longitude": -46.640764,
       "tipo": "placa_baixa",
@@ -112,7 +112,7 @@
     {
       "id_deteccao": "DET-00013",
       "id_dispositivo": "OCL-0001",
-      "data_hora": "2026-11-10T17:22:37",
+      "data_hora": "2026-11-10T18:18:37",
       "latitude": -23.546154,
       "longitude": -46.639523,
       "tipo": "lixeira",
@@ -121,7 +121,7 @@
     {
       "id_deteccao": "DET-00014",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-09T21:54:37",
+      "data_hora": "2026-11-09T22:50:37",
       "latitude": -23.546076,
       "longitude": -46.639483,
       "tipo": "lixeira",
@@ -130,7 +130,7 @@
     {
       "id_deteccao": "DET-00015",
       "id_dispositivo": "OCL-0009",
-      "data_hora": "2026-11-11T01:05:37",
+      "data_hora": "2026-11-11T02:01:37",
       "latitude": -23.546154,
       "longitude": -46.639519,
       "tipo": "lixeira",
@@ -139,7 +139,7 @@
     {
       "id_deteccao": "DET-00016",
       "id_dispositivo": "OCL-0001",
-      "data_hora": "2026-11-10T05:15:37",
+      "data_hora": "2026-11-10T06:11:37",
       "latitude": -23.546145,
       "longitude": -46.639528,
       "tipo": "lixeira",
@@ -148,7 +148,7 @@
     {
       "id_deteccao": "DET-00017",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-11T02:39:37",
+      "data_hora": "2026-11-11T03:35:37",
       "latitude": -23.546049,
       "longitude": -46.639451,
       "tipo": "lixeira",
@@ -157,7 +157,7 @@
     {
       "id_deteccao": "DET-00018",
       "id_dispositivo": "OCL-0009",
-      "data_hora": "2026-11-11T03:19:37",
+      "data_hora": "2026-11-11T04:15:37",
       "latitude": -23.546034,
       "longitude": -46.639489,
       "tipo": "lixeira",
@@ -166,7 +166,7 @@
     {
       "id_deteccao": "DET-00019",
       "id_dispositivo": "OCL-0001",
-      "data_hora": "2026-11-09T23:23:37",
+      "data_hora": "2026-11-10T00:19:37",
       "latitude": -23.5461,
       "longitude": -46.639438,
       "tipo": "lixeira",
@@ -175,7 +175,7 @@
     {
       "id_deteccao": "DET-00020",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-11T00:30:37",
+      "data_hora": "2026-11-11T01:26:37",
       "latitude": -23.546158,
       "longitude": -46.639461,
       "tipo": "lixeira",
@@ -184,7 +184,7 @@
     {
       "id_deteccao": "DET-00021",
       "id_dispositivo": "OCL-0009",
-      "data_hora": "2026-11-10T03:41:37",
+      "data_hora": "2026-11-10T04:37:37",
       "latitude": -23.546111,
       "longitude": -46.639487,
       "tipo": "lixeira",
@@ -193,7 +193,7 @@
     {
       "id_deteccao": "DET-00022",
       "id_dispositivo": "OCL-0001",
-      "data_hora": "2026-11-11T09:01:37",
+      "data_hora": "2026-11-11T09:57:37",
       "latitude": -23.546098,
       "longitude": -46.639565,
       "tipo": "lixeira",
@@ -202,7 +202,7 @@
     {
       "id_deteccao": "DET-00023",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-11T07:37:37",
+      "data_hora": "2026-11-11T08:33:37",
       "latitude": -23.54608,
       "longitude": -46.639453,
       "tipo": "lixeira",
@@ -211,7 +211,7 @@
     {
       "id_deteccao": "DET-00025",
       "id_dispositivo": "OCL-0003",
-      "data_hora": "2026-10-02T00:18:37",
+      "data_hora": "2026-10-02T01:14:37",
       "latitude": -23.546942,
       "longitude": -46.641978,
       "tipo": "entulho",
@@ -220,7 +220,7 @@
     {
       "id_deteccao": "DET-00026",
       "id_dispositivo": "OCL-0005",
-      "data_hora": "2026-10-02T00:43:37",
+      "data_hora": "2026-10-02T01:39:37",
       "latitude": -23.54696,
       "longitude": -46.641857,
       "tipo": "entulho",
@@ -229,7 +229,7 @@
     {
       "id_deteccao": "DET-00027",
       "id_dispositivo": "OCL-0007",
-      "data_hora": "2026-10-02T04:18:37",
+      "data_hora": "2026-10-02T05:14:37",
       "latitude": -23.547055,
       "longitude": -46.641979,
       "tipo": "entulho",
@@ -238,7 +238,7 @@
     {
       "id_deteccao": "DET-00028",
       "id_dispositivo": "OCL-0005",
-      "data_hora": "2026-11-11T08:58:37",
+      "data_hora": "2026-11-11T09:54:37",
       "latitude": -23.544558,
       "longitude": -46.640999,
       "tipo": "pessoa",
@@ -247,7 +247,7 @@
     {
       "id_deteccao": "DET-00029",
       "id_dispositivo": "OCL-0005",
-      "data_hora": "2026-11-11T08:16:37",
+      "data_hora": "2026-11-11T09:12:37",
       "latitude": -23.544583,
       "longitude": -46.641056,
       "tipo": "pessoa",
@@ -256,7 +256,7 @@
     {
       "id_deteccao": "DET-00030",
       "id_dispositivo": "OCL-0009",
-      "data_hora": "2026-11-11T16:57:37",
+      "data_hora": "2026-11-11T17:53:37",
       "latitude": -23.544584,
       "longitude": -46.641002,
       "tipo": "pessoa",
@@ -265,7 +265,7 @@
     {
       "id_deteccao": "DET-00031",
       "id_dispositivo": "OCL-0005",
-      "data_hora": "2026-11-11T13:59:37",
+      "data_hora": "2026-11-11T14:55:37",
       "latitude": -23.544671,
       "longitude": -46.64094,
       "tipo": "pessoa",
@@ -274,7 +274,7 @@
     {
       "id_deteccao": "DET-00032",
       "id_dispositivo": "OCL-0008",
-      "data_hora": "2026-11-11T15:56:37",
+      "data_hora": "2026-11-11T16:52:37",
       "latitude": -23.544524,
       "longitude": -46.640995,
       "tipo": "pessoa",
@@ -283,7 +283,7 @@
     {
       "id_deteccao": "DET-00033",
       "id_dispositivo": "OCL-0008",
-      "data_hora": "2026-11-11T08:26:37",
+      "data_hora": "2026-11-11T09:22:37",
       "latitude": -23.544654,
       "longitude": -46.640996,
       "tipo": "pessoa",
@@ -292,7 +292,7 @@
     {
       "id_deteccao": "DET-00034",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-11T08:19:37",
+      "data_hora": "2026-11-11T09:15:37",
       "latitude": -23.544559,
       "longitude": -46.64097,
       "tipo": "pessoa",
@@ -301,7 +301,7 @@
     {
       "id_deteccao": "DET-00035",
       "id_dispositivo": "OCL-0006",
-      "data_hora": "2026-11-11T09:49:37",
+      "data_hora": "2026-11-11T10:45:37",
       "latitude": -23.544536,
       "longitude": -46.641008,
       "tipo": "pessoa",
@@ -310,7 +310,7 @@
     {
       "id_deteccao": "DET-00036",
       "id_dispositivo": "OCL-0006",
-      "data_hora": "2026-11-11T16:50:37",
+      "data_hora": "2026-11-11T17:46:37",
       "latitude": -23.544586,
       "longitude": -46.641043,
       "tipo": "pessoa",
@@ -319,7 +319,7 @@
     {
       "id_deteccao": "DET-00037",
       "id_dispositivo": "OCL-0001",
-      "data_hora": "2026-11-11T13:43:37",
+      "data_hora": "2026-11-11T14:39:37",
       "latitude": -23.544669,
       "longitude": -46.641075,
       "tipo": "pessoa",
@@ -328,7 +328,7 @@
     {
       "id_deteccao": "DET-00038",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-11T12:56:37",
+      "data_hora": "2026-11-11T13:52:37",
       "latitude": -23.544573,
       "longitude": -46.641046,
       "tipo": "pessoa",
@@ -337,7 +337,7 @@
     {
       "id_deteccao": "DET-00039",
       "id_dispositivo": "OCL-0008",
-      "data_hora": "2026-11-11T13:52:37",
+      "data_hora": "2026-11-11T14:48:37",
       "latitude": -23.544554,
       "longitude": -46.640951,
       "tipo": "pessoa",
@@ -346,7 +346,7 @@
     {
       "id_deteccao": "DET-00040",
       "id_dispositivo": "OCL-0007",
-      "data_hora": "2026-11-11T11:18:37",
+      "data_hora": "2026-11-11T12:14:37",
       "latitude": -23.544612,
       "longitude": -46.641005,
       "tipo": "pessoa",
@@ -355,7 +355,7 @@
     {
       "id_deteccao": "DET-00041",
       "id_dispositivo": "OCL-0002",
-      "data_hora": "2026-11-11T16:09:37",
+      "data_hora": "2026-11-11T17:05:37",
       "latitude": -23.544616,
       "longitude": -46.641026,
       "tipo": "pessoa",
@@ -364,7 +364,7 @@
     {
       "id_deteccao": "DET-00042",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-11T13:53:37",
+      "data_hora": "2026-11-11T14:49:37",
       "latitude": -23.544594,
       "longitude": -46.641058,
       "tipo": "pessoa",
@@ -373,7 +373,7 @@
     {
       "id_deteccao": "DET-00043",
       "id_dispositivo": "OCL-0001",
-      "data_hora": "2026-11-11T14:36:37",
+      "data_hora": "2026-11-11T15:32:37",
       "latitude": -23.54464,
       "longitude": -46.640932,
       "tipo": "carro",
@@ -382,7 +382,7 @@
     {
       "id_deteccao": "DET-00044",
       "id_dispositivo": "OCL-0002",
-      "data_hora": "2026-11-11T14:23:37",
+      "data_hora": "2026-11-11T15:19:37",
       "latitude": -23.544543,
       "longitude": -46.641064,
       "tipo": "carro",
@@ -391,7 +391,7 @@
     {
       "id_deteccao": "DET-00045",
       "id_dispositivo": "OCL-0003",
-      "data_hora": "2026-11-11T14:05:37",
+      "data_hora": "2026-11-11T15:01:37",
       "latitude": -23.544546,
       "longitude": -46.640925,
       "tipo": "carro",
@@ -400,7 +400,7 @@
     {
       "id_deteccao": "DET-00046",
       "id_dispositivo": "OCL-0004",
-      "data_hora": "2026-11-11T15:34:37",
+      "data_hora": "2026-11-11T16:30:37",
       "latitude": -23.543142,
       "longitude": -46.644015,
       "tipo": "galho_baixo",
@@ -409,7 +409,7 @@
     {
       "id_deteccao": "DET-00047",
       "id_dispositivo": "OCL-0005",
-      "data_hora": "2026-11-11T16:01:37",
+      "data_hora": "2026-11-11T16:57:37",
       "latitude": -23.543146,
       "longitude": -46.644016,
       "tipo": "galho_baixo",
@@ -418,7 +418,7 @@
     {
       "id_deteccao": "DET-00048",
       "id_dispositivo": "OCL-0006",
-      "data_hora": "2026-11-11T15:40:37",
+      "data_hora": "2026-11-11T16:36:37",
       "latitude": -23.543154,
       "longitude": -46.64408,
       "tipo": "galho_baixo",

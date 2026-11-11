@@ -76,8 +76,8 @@
         "5ef0bc954f4756bb",
         "35fb0fec802840da"
       ],
-      "primeira_deteccao": "2026-11-10T15:47:37",
-      "ultima_deteccao": "2026-11-11T16:20:37"
+      "primeira_deteccao": "2026-11-10T16:43:37",
+      "ultima_deteccao": "2026-11-11T17:16:37"
     },
     "-23.545200|-46.640700|placa_baixa": {
       "id": "GH-EF3386EA",
@@ -94,8 +94,8 @@
         "f69ae39e4f96a328",
         "49bd2512c5ddb14a"
       ],
-      "primeira_deteccao": "2026-11-10T13:47:37",
-      "ultima_deteccao": "2026-11-11T14:46:37"
+      "primeira_deteccao": "2026-11-10T14:43:37",
+      "ultima_deteccao": "2026-11-11T15:42:37"
     },
     "-23.546100|-46.639500|lixeira": {
       "id": "GH-3315565A",
@@ -111,8 +111,8 @@
         "5ef0bc954f4756bb",
         "f99015ca30bafa8f"
       ],
-      "primeira_deteccao": "2026-11-09T21:54:37",
-      "ultima_deteccao": "2026-11-11T09:01:37"
+      "primeira_deteccao": "2026-11-09T22:50:37",
+      "ultima_deteccao": "2026-11-11T09:57:37"
     },
     "-23.547000|-46.641900|entulho": {
       "id": "GH-D879898C",
@@ -128,8 +128,8 @@
         "35fb0fec802840da",
         "f69ae39e4f96a328"
       ],
-      "primeira_deteccao": "2026-10-02T00:18:37",
-      "ultima_deteccao": "2026-10-02T04:18:37"
+      "primeira_deteccao": "2026-10-02T01:14:37",
+      "ultima_deteccao": "2026-10-02T05:14:37"
     },
     "-23.543400|-46.638900|poste": {
       "id": "GH-8D61F8C5",
@@ -145,8 +145,8 @@
         "dc7dc9175cf702d4",
         "49bd2512c5ddb14a"
       ],
-      "primeira_deteccao": "2026-11-10T17:19:37",
-      "ultima_deteccao": "2026-11-11T10:27:37"
+      "primeira_deteccao": "2026-11-10T18:15:37",
+      "ultima_deteccao": "2026-11-11T11:23:37"
     },
     "-23.541900|-46.641600|cacamba": {
       "id": "GH-E8406923",
@@ -161,8 +161,8 @@
         "d5d33d9a2250bde7",
         "5ef0bc954f4756bb"
       ],
-      "primeira_deteccao": "2026-11-10T11:32:37",
-      "ultima_deteccao": "2026-11-11T15:27:37"
+      "primeira_deteccao": "2026-11-10T12:28:37",
+      "ultima_deteccao": "2026-11-11T16:23:37"
     },
     "-23.544900|-46.643100|orelhao": {
       "id": "GH-E13C6CCB",
@@ -176,8 +176,8 @@
       "dispositivos": [
         "f69ae39e4f96a328"
       ],
-      "primeira_deteccao": "2026-11-11T12:49:37",
-      "ultima_deteccao": "2026-11-11T12:49:37"
+      "primeira_deteccao": "2026-11-11T13:45:37",
+      "ultima_deteccao": "2026-11-11T13:45:37"
     },
     "-23.543100|-46.644000|galho_baixo": {
       "id": "GH-46713A14",
@@ -193,8 +193,8 @@
         "33a16568ac92f9cf",
         "ff40a81f4c5b6247"
       ],
-      "primeira_deteccao": "2026-11-11T16:23:38",
-      "ultima_deteccao": "2026-11-11T17:01:38"
+      "primeira_deteccao": "2026-11-11T17:17:50",
+      "ultima_deteccao": "2026-11-11T17:55:50"
     }
   }
 }

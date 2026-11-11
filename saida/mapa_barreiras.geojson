@@ -1,7 +1,7 @@
 {
   "type": "FeatureCollection",
   "metadata": {
-    "gerado_em": "2026-11-11T18:04:43",
+    "gerado_em": "2026-11-11T19:01:43",
     "fonte": "Guiding Hand RPA"
   },
   "features": [
@@ -23,8 +23,8 @@
         "total_deteccoes": 11,
         "dispositivos_distintos": 3,
         "confianca_media": 0.78,
-        "primeira_deteccao": "2026-11-09T21:54:37",
-        "ultima_deteccao": "2026-11-11T09:01:37"
+        "primeira_deteccao": "2026-11-09T22:50:37",
+        "ultima_deteccao": "2026-11-11T09:57:37"
       }
     },
     {
@@ -45,8 +45,8 @@
         "total_deteccoes": 4,
         "dispositivos_distintos": 3,
         "confianca_media": 0.74,
-        "primeira_deteccao": "2026-11-11T16:23:38",
-        "ultima_deteccao": "2026-11-11T17:01:38"
+        "primeira_deteccao": "2026-11-11T17:17:50",
+        "ultima_deteccao": "2026-11-11T17:55:50"
       }
     },
     {
@@ -67,8 +67,8 @@
         "total_deteccoes": 8,
         "dispositivos_distintos": 5,
         "confianca_media": 0.72,
-        "primeira_deteccao": "2026-11-10T15:47:37",
-        "ultima_deteccao": "2026-11-11T16:20:37"
+        "primeira_deteccao": "2026-11-10T16:43:37",
+        "ultima_deteccao": "2026-11-11T17:16:37"
       }
     },
     {
@@ -89,8 +89,8 @@
         "total_deteccoes": 4,
         "dispositivos_distintos": 4,
         "confianca_media": 0.79,
-        "primeira_deteccao": "2026-11-10T13:47:37",
-        "ultima_deteccao": "2026-11-11T14:46:37"
+        "primeira_deteccao": "2026-11-10T14:43:37",
+        "ultima_deteccao": "2026-11-11T15:42:37"
       }
     },
     {
@@ -111,8 +111,8 @@
         "total_deteccoes": 3,
         "dispositivos_distintos": 3,
         "confianca_media": 0.75,
-        "primeira_deteccao": "2026-10-02T00:18:37",
-        "ultima_deteccao": "2026-10-02T04:18:37"
+        "primeira_deteccao": "2026-10-02T01:14:37",
+        "ultima_deteccao": "2026-10-02T05:14:37"
       }
     },
     {
@@ -133,8 +133,8 @@
         "total_deteccoes": 3,
         "dispositivos_distintos": 3,
         "confianca_media": 0.81,
-        "primeira_deteccao": "2026-11-10T17:19:37",
-        "ultima_deteccao": "2026-11-11T10:27:37"
+        "primeira_deteccao": "2026-11-10T18:15:37",
+        "ultima_deteccao": "2026-11-11T11:23:37"
       }
     }
   ]
