@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Relatório Técnico · Guiding Hand RPA</title>
+<!--
+  FONTE DO PDF. Para atualizar (ex.: preencher nomes, RMs e links):
+  1. edite este arquivo;
+  2. rode no PowerShell, na pasta docs:
+     & "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --headless=new --no-pdf-header-footer --print-to-pdf="$PWD\Relatorio_Tecnico_GuidingHand_RPA.pdf" "$PWD\relatorio_tecnico.html"
+-->
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  body { font-family: "Segoe UI", Roboto, Arial, sans-serif; font-size: 10.5pt; line-height: 1.45; color: #1b1f24; }
+  h1 { font-size: 22pt; margin: 0 0 4px; color: #0d2b45; }
+  h2 { font-size: 13.5pt; color: #0d2b45; border-bottom: 2px solid #0d2b45; padding-bottom: 3px; margin: 22px 0 8px; break-after: avoid; }
+  h3 { font-size: 11pt; margin: 14px 0 4px; break-after: avoid; }
+  p { margin: 5px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 9.5pt; break-inside: avoid; }
+  th, td { border: 1px solid #cfd5dc; padding: 4px 6px; text-align: left; vertical-align: top; }
+  th { background: #eef1f4; }
+  code, pre { font-family: Consolas, monospace; font-size: 8.6pt; }
+  pre { background: #f4f6f8; border: 1px solid #dde1e6; padding: 8px; white-space: pre-wrap; break-inside: avoid; }
+  img { max-width: 100%; border: 1px solid #dde1e6; }
+  .capa { border-left: 6px solid #0d2b45; padding: 6px 0 6px 14px; margin-bottom: 16px; }
+  .sub { color: #5b6470; }
+  .links td:first-child { width: 28%; font-weight: 600; }
+  .figura { text-align: center; font-size: 9pt; color: #5b6470; margin: 8px 0 12px; break-inside: avoid; }
+  .quebra { break-before: page; }
+  .ok { color: #2e7d32; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<div class="capa">
+  <p class="sub">FIAP · Global Solution 2026.2 · CitizenTech · Engenharia de Software 4º ano</p>
+  <h1>Guiding Hand · Automação de Barreiras</h1>
+  <p class="sub">Robotic Process Automation: do processo manual à automação inteligente<br>
+  Professores: Bruno Diniz e Cibele Ribeiro</p>
+</div>
+
+<h2>1. Integrantes</h2>
+<table>
+  <tr><th>Nome completo</th><th style="width:25%">RM</th></tr>
+  <tr><td>João Rodrigo Solano Nogueira</td><td>RM551319</td></tr>
+  <tr><td>Julia Amorim Bezerra</td><td>RM99609</td></tr>
+  <tr><td>Lana Giulia Auada Leite</td><td>RM551143</td></tr>
+  <tr><td>Tony Willian da Silva Segalin</td><td>RM550667</td></tr>
+</table>
+
+<table class="links">
+  <tr><td>Repositório GitHub</td><td>https://github.com/SEU-USUARIO/guiding-hand-rpa</td></tr>
+  <tr><td>Vídeo demonstrativo</td><td>https://youtu.be/LINK-DO-VIDEO</td></tr>
+</table>
+
+<h2>2. A CitizenTech e o problema resolvido</h2>
+<p>O <b>Guiding Hand</b> é um par de óculos inteligentes de baixo custo que ajuda pessoas cegas ou com baixa visão
+a andar pela cidade. Ele avisa, por vibração e voz, sobre obstáculos acima da cintura que a bengala não alcança,
+como placas, galhos, orelhões e caçambas, e deixa o celular guardado no bolso. No Brasil, 7,9 milhões de pessoas
+têm dificuldade para enxergar (Censo 2022).</p>
+<p>Cada obstáculo fixo detectado pelos óculos vira um registro anônimo que, confirmado, entra no <b>mapa de barreiras</b>.
+Esse mapa serve a dois públicos: o app usa o mapa para traçar rotas que evitam barreiras conhecidas, e a prefeitura
+recebe relatórios para a zeladoria consertar as calçadas.</p>
+<p><b>O problema operacional:</b> as detecções chegam aos milhares, com ruído. Há pessoas andando, carros
+estacionados, leituras de baixa confiança, reenvios duplicados e arquivos com defeito. Sem automação, alguém
+teria de juntar os arquivos todos os dias, filtrar à mão, conferir se o mesmo buraco foi visto por vários
+usuários, atualizar o mapa e montar a planilha da zeladoria. O processo seria lento e sujeito a erro, e um
+falso alarme no mapa desvia a rota de uma pessoa cega sem necessidade.</p>
+
+<h2>3. Objetivo da automação e benefício para o cidadão</h2>
+<p><b>Objetivo:</b> confirmar barreiras de forma automática a partir de várias detecções independentes, manter o
+mapa de barreiras atualizado e gerar o relatório da zeladoria, todos os dias e sem intervenção humana.</p>
+<table>
+  <tr><th>Para quem</th><th>Benefício</th></tr>
+  <tr><td>Pessoa cega ou com baixa visão</td><td>Rotas que evitam barreiras <b>confirmadas</b> (3 ou mais óculos), sem falso alarme causado por uma leitura isolada</td></tr>
+  <tr><td>Prefeitura / zeladoria</td><td>Planilha diária priorizada, com link do mapa para cada ponto, e aviso das barreiras que provavelmente já foram resolvidas</td></tr>
+  <tr><td>Equipe Guiding Hand</td><td>Fim do trabalho manual diário, com rastreabilidade completa por logs e auditoria</td></tr>
+</table>
+
+<h2>4. Descrição do processo e desenho do fluxo</h2>
+<h3>Processo manual (AS-IS)</h3>
+<p>1) Baixar os arquivos de detecção da nuvem. 2) Abrir cada um numa planilha. 3) Apagar pessoas, carros e
+linhas com erro. 4) Procurar detecções no mesmo lugar e contar quantos óculos diferentes as viram. 5) Atualizar
+o mapa. 6) Montar e enviar a planilha da zeladoria. O processo leva horas, é repetitivo e não deixa registro do que foi decidido.</p>
+<h3>Processo automatizado (TO-BE)</h3>
+<table>
+  <tr><th style="width:22%">Elemento</th><th>Descrição</th></tr>
+  <tr><td>Início</td><td>Agendamento diário às 06h (Agendador de Tarefas / cron) ou execução manual</td></tr>
+  <tr><td>Entradas</td><td>API <code>/deteccoes</code> da nuvem dos óculos e arquivos JSON/CSV em <code>data/entrada/</code>; estado anterior do mapa</td></tr>
+  <tr><td>Etapas</td><td>Carregar estado, coletar as fontes, validar e classificar cada detecção, agrupar, decidir o status de cada barreira, salvar, publicar e registrar</td></tr>
+  <tr><td>Decisões</td><td>Leitura OK? Detecção válida, inédita, fixa e confiável? Mais detecções? Mais fontes? Status de cada barreira (R6 a R8)</td></tr>
+  <tr><td>Repetições</td><td>Para cada fonte, para cada detecção e para cada barreira</td></tr>
+  <tr><td>Exceções</td><td>API fora do ar, arquivo inválido, registro inválido, duplicidade, estado corrompido, pasta ausente (seção 7)</td></tr>
+  <tr><td>Saídas</td><td><code>mapa_barreiras.geojson</code> (MVP), <code>relatorio_zeladoria_AAAA-MM-DD.csv</code>, <code>resumo_execucao.json</code>, logs e auditoria</td></tr>
+</table>
+<div class="figura">
+  <img src="fluxo_automacao.png" alt="Fluxo BPMN da automação">
+  <br>Figura 1 · Fluxo BPMN 2.0 da automação (arquivo editável: <code>docs/fluxo_automacao.bpmn</code>, abre em bpmn.io ou Camunda Modeler)
+</div>
+
+<h2>5. Tecnologias utilizadas e justificativa</h2>
+<table>
+  <tr><th style="width:26%">Tecnologia</th><th>Justificativa</th></tr>
+  <tr><td>Python 3 (só biblioteca padrão)</td><td>Gratuito, versionável no GitHub e fácil de ler. Sem dependências externas, roda em qualquer máquina sem instalação e reduz a superfície de ataque</td></tr>
+  <tr><td><code>urllib</code>, <code>json</code>, <code>csv</code></td><td>Integração com a API REST e com os arquivos estruturados enviados pela nuvem</td></tr>
+  <tr><td><code>logging</code></td><td>Logs com data/hora e níveis (INFO, WARNING, ERROR, CRITICAL)</td></tr>
+  <tr><td><code>hashlib</code> (SHA-256 + salt)</td><td>Anonimização do identificador dos óculos (LGPD)</td></tr>
+  <tr><td><code>unittest</code></td><td>Testes automatizados de sucesso, decisão e falha</td></tr>
+  <tr><td>GeoJSON</td><td>Padrão aberto de mapas, lido diretamente pelo app (Leaflet), por Google Maps e por sistemas de prefeituras</td></tr>
+  <tr><td>BPMN 2.0</td><td>Notação padrão de processos para documentar o fluxo</td></tr>
+</table>
+<p>Escolhemos Python em vez de UiPath ou Power Automate porque o processo não depende de interface gráfica: é
+integração de dados (API e arquivos). Assim o robô pode rodar na mesma nuvem dos outros serviços do Guiding Hand.</p>
+
+<h2>6. Regras de negócio, decisões e processamento</h2>
+<table>
+  <tr><th style="width:7%">Regra</th><th>Descrição</th><th style="width:16%">Onde</th></tr>
+  <tr><td>R1</td><td>Validação: campos obrigatórios, coordenada dentro do município de São Paulo, confiança entre 0 e 1, data no formato ISO, tipo conhecido</td><td><code>regras.validar</code></td></tr>
+  <tr><td>R2</td><td>Duplicidade: cada <code>id_deteccao</code> conta uma vez, inclusive entre execuções diferentes</td><td><code>main.processar_registro</code></td></tr>
+  <tr><td>R3</td><td>Pessoa, ciclista, animal e carro são obstáculos móveis e não entram no mapa</td><td><code>main.processar_registro</code></td></tr>
+  <tr><td>R4</td><td>Confiança abaixo de 0,5 é descartada como ruído</td><td><code>main.processar_registro</code></td></tr>
+  <tr><td>R5</td><td>Posição generalizada para uma célula de ~30 m; detecções na mesma célula e do mesmo tipo formam uma barreira</td><td><code>regras.celula</code></td></tr>
+  <tr><td>R6</td><td>Barreira <b>confirmada</b> se vista por 3 ou mais óculos diferentes; caso contrário, <b>pendente</b> (não sai no mapa)</td><td><code>regras.definir_status</code></td></tr>
+  <tr><td>R7</td><td>Prioridade pelo tipo (buraco, galho, placa, caçamba e entulho = alta; orelhão, lixeira e calçada irregular = média; poste = baixa); 10 ou mais detecções elevam para alta</td><td><code>regras.definir_prioridade</code></td></tr>
+  <tr><td>R8</td><td>Barreira confirmada sem nova detecção há mais de 30 dias vira <b>possivelmente resolvida</b>; se voltar a ser detectada, é reaberta</td><td><code>regras.definir_status</code></td></tr>
+</table>
+<p>Todos os limites (3 óculos, 0,5, 30 m, 30 dias, 10 detecções) ficam em <code>src/config.py</code> e podem ser ajustados sem mexer no código.</p>
+
+<h2>7. Tratamento de exceções e recuperação</h2>
+<table>
+  <tr><th style="width:30%">Falha prevista</th><th>Tratamento</th></tr>
+  <tr><td>API fora do ar / timeout</td><td>3 tentativas com espera crescente (1s, 2s); depois registra ERRO, marca <code>api: indisponivel</code> e segue com os arquivos</td></tr>
+  <tr><td>Arquivo corrompido, vazio, CSV sem cabeçalho ou extensão errada</td><td>Registra ERRO com o motivo e move o arquivo para <code>data/rejeitados/</code> (quarentena); os outros seguem</td></tr>
+  <tr><td>Registro inválido</td><td>Rejeitado com o motivo no log; o lote continua</td></tr>
+  <tr><td>Dados duplicados</td><td>Ignorados com base nos IDs já processados, guardados no estado</td></tr>
+  <tr><td>Pasta ausente</td><td>Criada automaticamente, com AVISO no log</td></tr>
+  <tr><td>Estado corrompido</td><td>Cópia de segurança <code>barreiras_corrompido_*.json</code> e reinício limpo</td></tr>
+  <tr><td>Erro inesperado num registro</td><td>Capturado com stack trace no log; os demais registros seguem</td></tr>
+  <tr><td>Queda durante a gravação</td><td>Gravação atômica (arquivo temporário e depois renomeia); os arquivos só saem da entrada depois que o estado é salvo, então são reprocessados sem duplicar</td></tr>
+  <tr><td>Falha crítica</td><td>Status <code>falha</code>, log CRITICAL, linha na auditoria e código de saída 1, para o agendador alertar. <b>Nenhuma falha é silenciosa.</b></td></tr>
+</table>
+
+<h2>8. Logs e evidências de auditoria</h2>
+<p>Cada execução gera <code>logs/execucao_&lt;id&gt;.log</code> (data/hora, nível, cada decisão e cada erro) e
+acrescenta uma linha em <code>logs/auditoria.jsonl</code> com os totais, o status e os alertas. Os logs nunca contêm o ID dos óculos.</p>
+<pre>2026-11-11 14:00:16 | INFO     | === Início da execução 20261111_140016_78bc ===
+2026-11-11 14:00:16 | ERROR    | anotacoes_operador.txt: extensão não suportada (.txt). Movido para quarentena
+2026-11-11 14:00:16 | INFO     | Arquivo deteccoes_oculos_lote1.json lido: 47 detecções
+2026-11-11 14:00:16 | ERROR    | deteccoes_oculos_lote3.json: JSON inválido (linha 1). Movido para quarentena
+2026-11-11 14:00:16 | DEBUG    | Detecção DET-00028 ignorada: obstáculo móvel (pessoa)
+2026-11-11 14:00:16 | WARNING  | Detecção DET-00056 rejeitada: coordenada fora da área do piloto (São Paulo)
+2026-11-11 14:00:16 | WARNING  | Detecção DET-00057 rejeitada: campos ausentes: tipo
+2026-11-11 14:00:16 | INFO     | Barreira GH-7615D664 (buraco): pendente -> confirmada | 5 óculos, 8 detecções, prioridade alta
+2026-11-11 14:00:16 | INFO     | Barreira GH-D879898C (entulho): pendente -> possivelmente_resolvida | 3 óculos, 3 detecções
+2026-11-11 14:00:16 | INFO     | Detecções: 60 lidas | 33 aceitas | 4 inválidas | 2 duplicadas | 18 móveis | 3 baixa confiança | 0 erros
+2026-11-11 14:00:16 | INFO     | Barreiras: 4 confirmadas | 2 pendentes | 1 possivelmente resolvidas
+2026-11-11 14:00:16 | INFO     | === Fim da execução: CONCLUIDA_COM_ALERTAS (0.06s) ===</pre>
+<p>Trecho da auditoria (execução com a API fora do ar):</p>
+<pre>{"execucao": "20261111_140022_597f", "inicio": "2026-11-11T14:00:22", "status": "concluida_com_alertas",
+ "fontes": {"arquivos_lidos": 0, "arquivos_rejeitados": 0, "api": "indisponivel"},
+ "barreiras": {"total_conhecidas": 8, "confirmadas": 5, "pendentes": 2, "possivelmente_resolvidas": 1},
+ "alertas": ["API indisponível após 3 tentativas (URLError: ...)"]}</pre>
+
+<h2>9. Integração com o MVP</h2>
+<p>A automação publica <code>saida/mapa_barreiras.geojson</code>, um arquivo estruturado no padrão GeoJSON, e
+<code>saida/resumo_execucao.json</code>. O componente do MVP (<code>mvp/index.html</code>, a tela de mapa do app Guiding
+Hand) lê esses arquivos e mostra as barreiras no mapa, coloridas por prioridade, com uma lista acessível para leitor
+de tela e os indicadores da última execução. O mesmo GeoJSON alimenta o cálculo de rotas que evita barreiras
+confirmadas. A zeladoria recebe <code>relatorio_zeladoria_AAAA-MM-DD.csv</code>, que abre direto no Excel.</p>
+<p>Exemplo de uma barreira publicada:</p>
+<pre>{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-46.6422, -23.544]},
+ "properties": {"id": "GH-7615D664", "tipo": "buraco", "descricao": "Buraco na calçada", "status": "confirmada",
+  "prioridade": "alta", "total_deteccoes": 8, "dispositivos_distintos": 5, "confianca_media": 0.8, ...}}</pre>
+<div class="figura">
+  <img src="../assets/mvp_mapa_barreiras.png" alt="Tela do MVP consumindo o mapa gerado">
+  <br>Figura 2 · Tela do MVP lendo o GeoJSON publicado pela automação (5 confirmadas, 2 pendentes, 1 possivelmente resolvida)
+</div>
+
+<h2>10. Testes realizados</h2>
+<p>18 testes automatizados (<code>python -m unittest -v</code>), cada um numa pasta temporária isolada. Resultado: <span class="ok">18 de 18 aprovados</span>.</p>
+<table>
+  <tr><th style="width:8%">#</th><th>Cenário</th><th style="width:12%">Tipo</th><th>Resultado</th></tr>
+  <tr><td>CT01</td><td>3 óculos veem o mesmo buraco</td><td>Sucesso</td><td>Confirmada e publicada no GeoJSON e no CSV</td></tr>
+  <tr><td>CT02</td><td>Arquivo lido</td><td>Sucesso</td><td>Movido para processados</td></tr>
+  <tr><td>CT03</td><td>CSV com <code>;</code> e vírgula decimal</td><td>Sucesso</td><td>Aceito</td></tr>
+  <tr><td>CT04</td><td>Só 2 óculos</td><td>Decisão</td><td>Pendente, fora do mapa</td></tr>
+  <tr><td>CT05</td><td>Pessoa e carro</td><td>Decisão</td><td>Ignorados</td></tr>
+  <tr><td>CT06</td><td>Confiança 0,3</td><td>Decisão</td><td>Descartadas</td></tr>
+  <tr><td>CT07</td><td>Última detecção há 40 dias</td><td>Decisão</td><td>Possivelmente resolvida</td></tr>
+  <tr><td>CT08</td><td>10 detecções de um poste</td><td>Decisão</td><td>Prioridade sobe para alta</td></tr>
+  <tr><td>CT09</td><td>Detecções em dias diferentes</td><td>Decisão</td><td>Acumulam até confirmar</td></tr>
+  <tr><td>CT10</td><td>JSON corrompido + arquivo bom</td><td>Falha</td><td>Quarentena; o bom é processado</td></tr>
+  <tr><td>CT11</td><td>Registros inválidos</td><td>Falha</td><td>Rejeitados com motivo no log</td></tr>
+  <tr><td>CT12</td><td>Duplicadas no lote e em reenvio</td><td>Falha</td><td>Contadas uma vez</td></tr>
+  <tr><td>CT13</td><td>API fora do ar</td><td>Falha</td><td>Novas tentativas, ERRO no log, segue com arquivos</td></tr>
+  <tr><td>CT14</td><td>Pasta de entrada ausente</td><td>Falha</td><td>Criada; execução segue</td></tr>
+  <tr><td>CT15</td><td>Estado corrompido</td><td>Falha</td><td>Backup e reinício</td></tr>
+  <tr><td>CT16</td><td>Duas execuções</td><td>Auditoria</td><td>2 linhas na auditoria</td></tr>
+  <tr><td>CT17</td><td>ID real dos óculos</td><td>LGPD</td><td>Ausente de logs e saídas</td></tr>
+  <tr><td>CT18</td><td>Coordenada exata</td><td>LGPD</td><td>Generalizada para ~30 m</td></tr>
+</table>
+<p>A execução de ponta a ponta também foi registrada em <code>assets/execucao_terminal.txt</code> em quatro rodadas:
+arquivos locais, API online, mesma API de novo (4 duplicadas ignoradas) e API fora do ar.</p>
+
+<h2>11. Segurança e LGPD</h2>
+<p>Como o uso do produto revela uma deficiência, tratamos os dados como <b>dado pessoal sensível</b> (LGPD, art. 5º, II, e art. 11).</p>
+<ul>
+  <li><b>Minimização:</b> a automação recebe só o tipo do obstáculo, a posição, a confiança e o horário. Imagens são descartadas nos óculos e nunca chegam ao robô.</li>
+  <li><b>Pseudonimização:</b> o ID dos óculos vira um hash SHA-256 com <i>salt</i> secreto (variável <code>GH_SALT</code>, fora do código), usado só para contar dispositivos distintos.</li>
+  <li><b>Generalização:</b> a localização é arredondada para uma célula de ~30 m, e as saídas públicas trazem só contagens, nunca hashes nem horários individuais.</li>
+  <li><b>Logs sem dados sensíveis:</b> registram só o ID da detecção, o tipo e os totais (verificado no teste CT17).</li>
+  <li><b>Segredos fora do repositório:</b> <code>.env</code> no <code>.gitignore</code>; os dados do repositório são simulados.</li>
+  <li><b>Integridade:</b> gravação atômica, quarentena de arquivos suspeitos e trilha de auditoria somente de acréscimo.</li>
+  <li><b>Sem dependências externas:</b> menos risco na cadeia de suprimentos.</li>
+</ul>
+
+<h2>12. Links</h2>
+<table class="links">
+  <tr><td>Repositório GitHub</td><td>https://github.com/SEU-USUARIO/guiding-hand-rpa</td></tr>
+  <tr><td>Vídeo demonstrativo</td><td>https://youtu.be/LINK-DO-VIDEO</td></tr>
+  <tr><td>Fluxo BPMN</td><td>docs/fluxo_automacao.bpmn (no repositório)</td></tr>
+</table>
+
+</body>
+</html>

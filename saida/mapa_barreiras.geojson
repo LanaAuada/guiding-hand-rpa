@@ -1,0 +1,141 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "gerado_em": "2026-11-11T18:04:43",
+    "fonte": "Guiding Hand RPA"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6395,
+          -23.5461
+        ]
+      },
+      "properties": {
+        "id": "GH-3315565A",
+        "tipo": "lixeira",
+        "descricao": "Lixeira no percurso",
+        "status": "confirmada",
+        "prioridade": "alta",
+        "total_deteccoes": 11,
+        "dispositivos_distintos": 3,
+        "confianca_media": 0.78,
+        "primeira_deteccao": "2026-11-09T21:54:37",
+        "ultima_deteccao": "2026-11-11T09:01:37"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.644,
+          -23.5431
+        ]
+      },
+      "properties": {
+        "id": "GH-46713A14",
+        "tipo": "galho_baixo",
+        "descricao": "Galho na altura da cabeça",
+        "status": "confirmada",
+        "prioridade": "alta",
+        "total_deteccoes": 4,
+        "dispositivos_distintos": 3,
+        "confianca_media": 0.74,
+        "primeira_deteccao": "2026-11-11T16:23:38",
+        "ultima_deteccao": "2026-11-11T17:01:38"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6422,
+          -23.544
+        ]
+      },
+      "properties": {
+        "id": "GH-7615D664",
+        "tipo": "buraco",
+        "descricao": "Buraco na calçada",
+        "status": "confirmada",
+        "prioridade": "alta",
+        "total_deteccoes": 8,
+        "dispositivos_distintos": 5,
+        "confianca_media": 0.72,
+        "primeira_deteccao": "2026-11-10T15:47:37",
+        "ultima_deteccao": "2026-11-11T16:20:37"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6407,
+          -23.5452
+        ]
+      },
+      "properties": {
+        "id": "GH-EF3386EA",
+        "tipo": "placa_baixa",
+        "descricao": "Placa na altura da cabeça",
+        "status": "confirmada",
+        "prioridade": "alta",
+        "total_deteccoes": 4,
+        "dispositivos_distintos": 4,
+        "confianca_media": 0.79,
+        "primeira_deteccao": "2026-11-10T13:47:37",
+        "ultima_deteccao": "2026-11-11T14:46:37"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6419,
+          -23.547
+        ]
+      },
+      "properties": {
+        "id": "GH-D879898C",
+        "tipo": "entulho",
+        "descricao": "Entulho no percurso",
+        "status": "possivelmente_resolvida",
+        "prioridade": "alta",
+        "total_deteccoes": 3,
+        "dispositivos_distintos": 3,
+        "confianca_media": 0.75,
+        "primeira_deteccao": "2026-10-02T00:18:37",
+        "ultima_deteccao": "2026-10-02T04:18:37"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -46.6389,
+          -23.5434
+        ]
+      },
+      "properties": {
+        "id": "GH-8D61F8C5",
+        "tipo": "poste",
+        "descricao": "Poste no meio da calçada",
+        "status": "confirmada",
+        "prioridade": "baixa",
+        "total_deteccoes": 3,
+        "dispositivos_distintos": 3,
+        "confianca_media": 0.81,
+        "primeira_deteccao": "2026-11-10T17:19:37",
+        "ultima_deteccao": "2026-11-11T10:27:37"
+      }
+    }
+  ]
+}

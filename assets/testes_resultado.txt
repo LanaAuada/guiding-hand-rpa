@@ -1,0 +1,23 @@
+test_ct04_dois_oculos_ficam_pendentes_e_fora_do_mapa (tests.test_automacao.TesteDecisao.test_ct04_dois_oculos_ficam_pendentes_e_fora_do_mapa) ... ok
+test_ct05_pessoas_e_carros_sao_ignorados (tests.test_automacao.TesteDecisao.test_ct05_pessoas_e_carros_sao_ignorados) ... ok
+test_ct06_baixa_confianca_e_descartada (tests.test_automacao.TesteDecisao.test_ct06_baixa_confianca_e_descartada) ... ok
+test_ct07_barreira_sem_deteccao_ha_30_dias_vira_possivelmente_resolvida (tests.test_automacao.TesteDecisao.test_ct07_barreira_sem_deteccao_ha_30_dias_vira_possivelmente_resolvida) ... ok
+test_ct08_muitas_deteccoes_elevam_prioridade (tests.test_automacao.TesteDecisao.test_ct08_muitas_deteccoes_elevam_prioridade) ... ok
+test_ct09_deteccoes_em_execucoes_diferentes_se_acumulam (tests.test_automacao.TesteDecisao.test_ct09_deteccoes_em_execucoes_diferentes_se_acumulam) ... ok
+test_ct10_json_corrompido_vai_para_quarentena_e_o_resto_continua (tests.test_automacao.TesteFalha.test_ct10_json_corrompido_vai_para_quarentena_e_o_resto_continua) ... ok
+test_ct11_registros_invalidos_sao_rejeitados_com_motivo_no_log (tests.test_automacao.TesteFalha.test_ct11_registros_invalidos_sao_rejeitados_com_motivo_no_log) ... ok
+test_ct12_duplicadas_nao_contam_duas_vezes (tests.test_automacao.TesteFalha.test_ct12_duplicadas_nao_contam_duas_vezes) ... ok
+test_ct13_api_fora_do_ar_tenta_de_novo_e_segue_com_arquivos (tests.test_automacao.TesteFalha.test_ct13_api_fora_do_ar_tenta_de_novo_e_segue_com_arquivos) ... ok
+test_ct14_pasta_de_entrada_ausente_e_criada (tests.test_automacao.TesteFalha.test_ct14_pasta_de_entrada_ausente_e_criada) ... ok
+test_ct15_estado_corrompido_gera_backup_e_nao_para_a_automacao (tests.test_automacao.TesteFalha.test_ct15_estado_corrompido_gera_backup_e_nao_para_a_automacao) ... ok
+test_ct16_toda_execucao_entra_na_auditoria (tests.test_automacao.TesteFalha.test_ct16_toda_execucao_entra_na_auditoria) ... ok
+test_ct17_id_do_dispositivo_nunca_aparece_em_logs_ou_saidas (tests.test_automacao.TesteLGPD.test_ct17_id_do_dispositivo_nunca_aparece_em_logs_ou_saidas) ... ok
+test_ct18_localizacao_e_generalizada (tests.test_automacao.TesteLGPD.test_ct18_localizacao_e_generalizada) ... ok
+test_ct01_tres_oculos_confirmam_barreira_e_publicam_no_mapa (tests.test_automacao.TesteSucesso.test_ct01_tres_oculos_confirmam_barreira_e_publicam_no_mapa) ... ok
+test_ct02_arquivo_lido_vai_para_processados (tests.test_automacao.TesteSucesso.test_ct02_arquivo_lido_vai_para_processados) ... ok
+test_ct03_csv_com_ponto_e_virgula_e_aceito (tests.test_automacao.TesteSucesso.test_ct03_csv_com_ponto_e_virgula_e_aceito) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 2.995s
+
+OK

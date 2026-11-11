@@ -1,0 +1,10 @@
+2026-11-11 18:04:43 | INFO     | === Início da execução 20261111_180443_6bb0 ===
+2026-11-11 18:04:43 | INFO     | Estado carregado: 8 barreiras conhecidas
+2026-11-11 18:04:47 | WARNING  | API falhou na tentativa 1/3 (URLError: [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-11-11 18:04:52 | WARNING  | API falhou na tentativa 2/3 (URLError: [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-11-11 18:04:58 | WARNING  | API falhou na tentativa 3/3 (URLError: [WinError 10061] No connection could be made because the target machine actively refused it)
+2026-11-11 18:04:58 | ERROR    | API indisponível após 3 tentativas (URLError: [WinError 10061] No connection could be made because the target machine actively refused it). Seguindo apenas com os arquivos locais
+2026-11-11 18:04:58 | WARNING  | Nenhuma detecção nova para processar
+2026-11-11 18:04:58 | INFO     | Detecções: 0 lidas | 0 aceitas | 0 inválidas | 0 duplicadas | 0 móveis | 0 baixa confiança | 0 erros
+2026-11-11 18:04:58 | INFO     | Barreiras: 5 confirmadas | 2 pendentes | 1 possivelmente resolvidas
+2026-11-11 18:04:58 | INFO     | === Fim da execução: CONCLUIDA_COM_ALERTAS (15.20s) ===

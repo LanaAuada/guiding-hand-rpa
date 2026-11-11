@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guiding Hand · Mapa de Barreiras</title>
+  <!-- Componente do MVP que CONSOME a saída da automação (saida/mapa_barreiras.geojson) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <style>
+    :root { --fundo:#f6f7f9; --texto:#1b1f24; --sutil:#5b6470; --borda:#dde1e6; --card:#fff;
+            --alta:#c62828; --media:#ef6c00; --baixa:#2e7d32; --resolvida:#757575; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, Segoe UI, Roboto, sans-serif; background:var(--fundo); color:var(--texto); }
+    header { padding:16px 24px; background:#0d2b45; color:#fff; }
+    header h1 { margin:0; font-size:20px; } header p { margin:4px 0 0; opacity:.8; font-size:14px; }
+    main { display:grid; grid-template-columns: 1fr 420px; gap:16px; padding:16px 24px; }
+    #mapa { height: 560px; border-radius:8px; border:1px solid var(--borda); }
+    .cards { display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; margin-bottom:12px; }
+    .card { background:var(--card); border:1px solid var(--borda); border-radius:8px; padding:10px; }
+    .card b { display:block; font-size:24px; } .card span { color:var(--sutil); font-size:12px; }
+    table { width:100%; border-collapse:collapse; background:var(--card); font-size:13px; border-radius:8px; overflow:hidden; }
+    th, td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--borda); }
+    th { background:#eef1f4; }
+    .tag { padding:2px 7px; border-radius:10px; color:#fff; font-size:11px; white-space:nowrap; }
+    .meta { color:var(--sutil); font-size:12px; margin-top:8px; }
+    .erro { background:#fdecea; border:1px solid #f5c2c0; padding:12px; border-radius:8px; }
+    @media (max-width: 900px) { main { grid-template-columns: 1fr; padding:16px; } #mapa { height:380px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Guiding Hand · Mapa de Barreiras</h1>
+    <p>Barreiras confirmadas automaticamente a partir das detecções dos óculos · bairro piloto República (SP)</p>
+  </header>
+  <main>
+    <div id="mapa" role="region" aria-label="Mapa das barreiras"></div>
+    <section aria-label="Resumo e lista de barreiras">
+      <div class="cards">
+        <div class="card"><b id="c-conf">–</b><span>confirmadas</span></div>
+        <div class="card"><b id="c-pend">–</b><span>pendentes</span></div>
+        <div class="card"><b id="c-res">–</b><span>possivelmente resolvidas</span></div>
+      </div>
+      <table>
+        <caption style="text-align:left;padding:6px 0;font-weight:600">Barreiras publicadas pela automação</caption>
+        <thead><tr><th>ID</th><th>Barreira</th><th>Prioridade</th><th>Status</th></tr></thead>
+        <tbody id="lista"></tbody>
+      </table>
+      <p class="meta" id="meta"></p>
+    </section>
+  </main>
+  <script>
+    const COR = { alta:'var(--alta)', media:'var(--media)', baixa:'var(--baixa)' };
+    const HEX = { alta:'#c62828', media:'#ef6c00', baixa:'#2e7d32', resolvida:'#757575' };
+    const mapa = L.map('mapa').setView([-23.5447, -46.6412], 17);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      { maxZoom: 19, attribution: '&copy; OpenStreetMap' }).addTo(mapa);
+
+    async function carregar() {
+      try {
+        const [geo, resumo] = await Promise.all([
+          fetch('../saida/mapa_barreiras.geojson', { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error('mapa'); return r.json(); }),
+          fetch('../saida/resumo_execucao.json', { cache: 'no-store' }).then(r => r.ok ? r.json() : null),
+        ]);
+        const lista = document.getElementById('lista');
+        geo.features.forEach(f => {
+          const p = f.properties;
+          const resolvida = p.status === 'possivelmente_resolvida';
+          const cor = resolvida ? HEX.resolvida : HEX[p.prioridade];
+          const [lon, lat] = f.geometry.coordinates;
+          L.circleMarker([lat, lon], { radius: 11, color: '#fff', weight: 2, fillColor: cor, fillOpacity: resolvida ? .5 : .95 })
+            .addTo(mapa)
+            .bindPopup(`<b>${p.descricao}</b><br>${p.id} · prioridade ${p.prioridade}<br>` +
+                       `${p.total_deteccoes} detecções de ${p.dispositivos_distintos} óculos<br>` +
+                       `status: ${p.status.replace('_', ' ')}`);
+          lista.insertAdjacentHTML('beforeend',
+            `<tr><td>${p.id}</td><td>${p.descricao}</td>` +
+            `<td><span class="tag" style="background:${HEX[p.prioridade]}">${p.prioridade}</span></td>` +
+            `<td>${p.status.replace('_', ' ')}</td></tr>`);
+        });
+        if (resumo) {
+          document.getElementById('c-conf').textContent = resumo.barreiras.confirmadas;
+          document.getElementById('c-pend').textContent = resumo.barreiras.pendentes;
+          document.getElementById('c-res').textContent = resumo.barreiras.possivelmente_resolvidas;
+          document.getElementById('meta').textContent =
+            `Última execução da automação: ${resumo.inicio.replace('T', ' ')} · status ${resumo.status} · ` +
+            `${resumo.deteccoes.lidos} detecções lidas, ${resumo.deteccoes.aceitos} aceitas`;
+        }
+      } catch (e) {
+        document.querySelector('section').insertAdjacentHTML('afterbegin',
+          '<p class="erro">Não foi possível ler o mapa. Rode a automação (python -m src.main) e abra esta página via ' +
+          '<code>python -m http.server 8000</code> na raiz do projeto.</p>');
+      }
+    }
+    carregar();
+  </script>
+</body>
+</html>

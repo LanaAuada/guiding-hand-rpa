@@ -1,0 +1,7 @@
+﻿id;descricao;prioridade;status;latitude;longitude;total_deteccoes;dispositivos_distintos;ultima_deteccao;link_mapa
+GH-3315565A;Lixeira no percurso;alta;confirmada;-23.546100;-46.639500;11;3;2026-11-11 09:01;https://www.google.com/maps?q=-23.546100,-46.639500
+GH-46713A14;Galho na altura da cabeça;alta;confirmada;-23.543100;-46.644000;4;3;2026-11-11 17:01;https://www.google.com/maps?q=-23.543100,-46.644000
+GH-7615D664;Buraco na calçada;alta;confirmada;-23.544000;-46.642200;8;5;2026-11-11 16:20;https://www.google.com/maps?q=-23.544000,-46.642200
+GH-EF3386EA;Placa na altura da cabeça;alta;confirmada;-23.545200;-46.640700;4;4;2026-11-11 14:46;https://www.google.com/maps?q=-23.545200,-46.640700
+GH-D879898C;Entulho no percurso;alta;possivelmente_resolvida;-23.547000;-46.641900;3;3;2026-10-02 04:18;https://www.google.com/maps?q=-23.547000,-46.641900
+GH-8D61F8C5;Poste no meio da calçada;baixa;confirmada;-23.543400;-46.638900;3;3;2026-11-11 10:27;https://www.google.com/maps?q=-23.543400,-46.638900

@@ -1,0 +1,37 @@
+{
+  "execucao": "20261111_180443_6bb0",
+  "inicio": "2026-11-11T18:04:43",
+  "duracao_segundos": 15.204,
+  "status": "concluida_com_alertas",
+  "fontes": {
+    "arquivos_lidos": 0,
+    "arquivos_rejeitados": 0,
+    "api": "indisponivel"
+  },
+  "deteccoes": {
+    "lidos": 0,
+    "aceitos": 0,
+    "invalidos": 0,
+    "duplicados": 0,
+    "ignorados_moveis": 0,
+    "baixa_confianca": 0,
+    "erros": 0
+  },
+  "barreiras": {
+    "total_conhecidas": 8,
+    "confirmadas": 5,
+    "pendentes": 2,
+    "possivelmente_resolvidas": 1,
+    "novas_confirmadas": 0,
+    "novas_resolvidas": 0,
+    "reabertas": 0
+  },
+  "alertas": [
+    "API indisponível após 3 tentativas (URLError: [WinError 10061] No connection could be made because the target machine actively refused it)"
+  ],
+  "arquivos_gerados": [
+    "mapa_barreiras.geojson",
+    "relatorio_zeladoria_2026-11-11.csv"
+  ],
+  "log": "execucao_20261111_180443_6bb0.log"
+}
