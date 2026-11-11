@@ -1,6 +1,0 @@
-2026-11-11 18:59:26 | INFO     | === Início da execução 20261111_185926_4dfb ===
-2026-11-11 18:59:26 | INFO     | Estado carregado: 7 barreiras conhecidas
-2026-11-11 18:59:26 | WARNING  | Nenhuma detecção nova para processar
-2026-11-11 18:59:26 | INFO     | Detecções: 0 lidas | 0 aceitas | 0 inválidas | 0 duplicadas | 0 móveis | 0 baixa confiança | 0 erros
-2026-11-11 18:59:26 | INFO     | Barreiras: 4 confirmadas | 2 pendentes | 1 possivelmente resolvidas
-2026-11-11 18:59:26 | INFO     | === Fim da execução: SUCESSO (0.02s) ===

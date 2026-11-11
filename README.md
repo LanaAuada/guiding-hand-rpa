@@ -1,7 +1,7 @@
 # Guiding Hand · Automação de Barreiras (RPA)
 
-> FIAP · Global Solution 2026.2 · CitizenTech · Engenharia de Software 4º ano
-> Disciplina: Robotic Process Automation (Prof. Bruno Diniz e Profa. Cibele Ribeiro)
+> FIAP · Global Solution 11.2026 · CitizenTech · Engenharia de Software 4º ano
+> Disciplina: Robotic Process Automation (Prof. Bruno Diniz)
 
 O **Guiding Hand** é um par de óculos inteligentes que ajuda pessoas cegas ou com baixa visão a andar pela cidade.
 Cada obstáculo detectado pelos óculos vira um registro anônimo. **Esta automação transforma milhares desses registros
@@ -17,8 +17,6 @@ em um mapa de barreiras confiável e em um relatório para a zeladoria**, sem ni
 | Tony Willian da Silva Segalin | RM550667 |
 
 **Repositório:** https://github.com/LanaAuada/guiding-hand-rpa
-
-**Vídeo (até 3 min):** _cole aqui o link do YouTube/Drive_
 
 ## O problema e o que a automação faz
 
@@ -142,7 +140,7 @@ cálculo de rotas**. A tela [mvp/index.html](mvp/index.html) lê o arquivo e o r
 ```
 src/        código-fonte Python
 tests/      testes automatizados e evidências
-docs/       fluxo BPMN, imagem do fluxo, relatório técnico (PDF) e roteiro do vídeo
+docs/       fluxo BPMN, imagem do fluxo e relatório técnico (PDF)
 assets/     prints e saídas de terminal
 logs/       amostras de logs gerados (sem dados sensíveis)
 mvp/        tela do MVP que consome o resultado
